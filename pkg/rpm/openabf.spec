@@ -76,7 +76,7 @@ cp -r %{_vpath_builddir}/docs/docbook/. %{buildroot}%{_docdir}/%{name}/docbook/
 %license NOTICE
 %dir %{_includedir}/OpenABF
 %{_includedir}/OpenABF/OpenABF.hpp
-%{_libdir}/cmake/OpenABF/
+%{_datadir}/cmake/OpenABF/
 
 %files doc
 %doc README.md
