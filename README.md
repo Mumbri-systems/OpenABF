@@ -212,10 +212,6 @@ use OpenABF freely in open source or proprietary software. However, any software
 released in source or binary form must include and preserve a readable copy of
 the attributions provided in [NOTICE](NOTICE).
 
-The OpenABF logo and banner graphic are by Seth Parker (EduceLab, University
-of Kentucky) and are licensed under
-[CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/).
-
 ## Citation
 If you use OpenABF in your research, please cite this repository in your publication using [our Zenodo record](https://doi.org/10.5281/zenodo.4483858).
 
