@@ -1,4 +1,4 @@
-%global commit 3c1b52a02a15007d3dcb7746b08a4f3db0e7a0b6
+%global commit 21ba301b3f9d460e03c979230c70aebaa053b3fe
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 %global version_literal 2.1.0-rc.1
 %global commitdate 20260428
