@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION='3c1b52a0'
+VERSION='3c1b52a'
 
 tar -xzvf openabf-$VERSION.tar.gz
 rm OpenABF-$VERSION/logo.png
