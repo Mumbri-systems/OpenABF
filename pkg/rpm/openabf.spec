@@ -1,6 +1,7 @@
 %global commit 3c1b52a02a15007d3dcb7746b08a4f3db0e7a0b6
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 %global version_literal 2.1.0-rc.1
+%global commitdate 20260424
 %global debug_package %{nil}
 
 Name:     openabf
