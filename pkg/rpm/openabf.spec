@@ -11,6 +11,7 @@ License:  Apache-2.0
 URL:      https://github.com/educelab/OpenABF
 Source:   %{url}/archive/%{commit}/%{name}-%{shortcommit}.tar.gz
 Patch1:   tests-use-system-gtest.patch
+Patch2:   remove-logo.sh
 
 BuildRequires: cmake
 BuildRequires: gcc-c++
