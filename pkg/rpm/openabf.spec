@@ -53,9 +53,6 @@ Documentation for OpenABF using doxygen.
 # Remove logo and banner due to copyright issues
 rm -f logo.png
 rm -f docs/images/*
-sed -i '/logo\.png/d' src/Makefile
-sed -i '/banner\.svg/d' src/Makefile
-sed -i '/logo\.svg/d' src/Makefile
 
 %build
 %cmake \
