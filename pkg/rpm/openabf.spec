@@ -1,13 +1,15 @@
+%global commit 3c1b52a02a15007d3dcb7746b08a4f3db0e7a0b6
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
 %global version_literal 2.1.0-rc.1
 %global debug_package %{nil}
 
 Name:     openabf
-Version:  2.1.0~rc.1
+Version:  2.1.0~rc.1^%{commitdate}git%{shortcommit}
 Release:  %autorelease
 Summary:  A single-header C++ library of angle-based flattening algorithms
 License:  Apache-2.0
 URL:      https://github.com/educelab/OpenABF
-Source:   %{url}/archive/refs/tags/v%{version_literal}.tar.gz
+Source:   %{url}/archive/%{commit}/%{name}-%{shortcommit}.tar.gz
 Patch1:   tests-use-system-gtest.patch
 
 BuildRequires: cmake
@@ -46,7 +48,7 @@ Development and header files for OpenABF.
 Documentation for OpenABF using doxygen.
 
 %prep
-%autosetup -n OpenABF-%{version_literal} -p1
+%autosetup -n OpenABF-%{shortcommit} -p1
 
 
 %build
@@ -69,6 +71,7 @@ cp -r %{_vpath_builddir}/docs/docbook/. %{buildroot}%{_docdir}/%{name}/docbook/
 %files devel
 %doc README.md
 %license LICENSE
+%license NOTICE
 %dir %{_includedir}/OpenABF
 %{_includedir}/OpenABF/OpenABF.hpp
 %{_libdir}/cmake/OpenABF/
@@ -76,8 +79,9 @@ cp -r %{_vpath_builddir}/docs/docbook/. %{buildroot}%{_docdir}/%{name}/docbook/
 %files doc
 %doc README.md
 %license LICENSE
+%license NOTICE
 %dir %{_docdir}/%{name}
-%{_docdir}/%{name}/docbook/
+%doc %{_docdir}/%{name}/docbook/
 
 %changelog
 %autochangelog
