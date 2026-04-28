@@ -84,5 +84,6 @@ cp -r %{_vpath_builddir}/docs/docbook/. %{buildroot}%{_docdir}/%{name}/docbook/
 %dir %{_docdir}/%{name}
 %doc %{_docdir}/%{name}/docbook/
 
+
 %changelog
 %autochangelog
