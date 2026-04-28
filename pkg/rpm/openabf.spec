@@ -12,7 +12,6 @@ License:  Apache-2.0
 URL:      https://github.com/educelab/OpenABF
 Source:   %{url}/archive/%{commit}/%{name}-%{shortcommit}.tar.gz
 Patch1:   tests-use-system-gtest.patch
-Source2:   remove-logo.sh
 
 BuildRequires: cmake
 BuildRequires: gcc-c++
@@ -51,7 +50,12 @@ Documentation for OpenABF using doxygen.
 
 %prep
 %autosetup -n OpenABF-%{commit} -p1
-bash %{Source2}
+# Remove logo and banner due to copyright issues
+rm -f logo.png
+rm -f docs/images/*
+sed -i '/logo\.png/d' src/Makefile
+sed -i '/banner\.svg/d' src/Makefile
+sed -i '/logo\.svg/d' src/Makefile
 
 %build
 %cmake \
