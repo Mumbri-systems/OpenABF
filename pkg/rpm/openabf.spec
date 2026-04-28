@@ -50,7 +50,7 @@ Development and header files for OpenABF.
 Documentation for OpenABF using doxygen.
 
 %prep
-%autosetup -n OpenABF-%{shortcommit} -p1
+%autosetup -n OpenABF-%{commit} -p1
 
 
 %build
