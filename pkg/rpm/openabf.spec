@@ -51,7 +51,7 @@ Documentation for OpenABF using doxygen.
 
 %prep
 %autosetup -n OpenABF-%{commit} -p1
-
+bash %{Source2}
 
 %build
 %cmake \
