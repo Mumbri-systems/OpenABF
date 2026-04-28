@@ -51,8 +51,6 @@ Documentation for OpenABF using doxygen.
 %prep
 %autosetup -n OpenABF-%{commit} -p1
 # Remove logo and banner due to copyright issues
-pwd
-ls .
 rm -f logo.png
 rm -f docs/images/*
 
