@@ -11,7 +11,6 @@ Summary:  A single-header C++ library of angle-based flattening algorithms
 License:  Apache-2.0
 URL:      https://github.com/educelab/OpenABF
 Source:   https://github.com/Mumbri-systems/OpenABF/archive/%{commit}/%{name}-%{shortcommit}.tar.gz
-Patch1:   tests-use-system-gtest.patch
 
 BuildRequires: cmake
 BuildRequires: gcc-c++
