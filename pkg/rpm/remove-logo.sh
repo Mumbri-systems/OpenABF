@@ -1,9 +1,11 @@
 #!/bin/sh
 
-VERSION='3c1b52a02a15007d3dcb7746b08a4f3db0e7a0b6'
-
+VERSION='v2.1.0'
+# SHORTVERSION='3c1b52a'
+wget https://github.com/educelab/OpenABF/archive/$VERSION/OpenABF-$VERSION.tar.gz
+tar -xf $VERSION.tar.gz
+#remove prohibited copyright content
 rm OpenABF-$VERSION/logo.png
 rm OpenABF-$VERSION/docs/images/*
-sed -i -e 's/logo.png//' OpenABF-$VERSION/src/Makefile
-sed -i -e 's/banner.svg//' OpenABF-$VERSION/src/Makefile
-sed -i -e 's/logo.svg//' OpenABF-$VERSION/src/Makefile
+tar -cf openabf-$VERSION-clean.tar OpenABF-$VERSION
+gzip openabf-$VERSION-clean.tar
