@@ -1,6 +1,9 @@
 #!/bin/sh
-
-VERSION='2.1.0'
+if [ -n "$1" ]; then
+    VERSION="$1"
+else
+    VERSION='2.1.0'
+fi
 # SHORTVERSION='3c1b52a'
 wget https://github.com/educelab/OpenABF/archive/v$VERSION/OpenABF-v$VERSION.tar.gz
 tar -xf v$VERSION.tar.gz
