@@ -1,16 +1,18 @@
-%global commit 3c1b52a02a15007d3dcb7746b08a4f3db0e7a0b6
+%global commit 770dcf3da345a73c126c1bc289862d20e21fe608
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global version_literal 2.1.0-rc.1
-%global commitdate 20260424
+%global version_literal 2.1.0
+%global commitdate 20260615
 %global debug_package %{nil}
 
 Name:     openabf
-Version:  2.1.0~rc.1^%{commitdate}git%{shortcommit}
+Version:  2.1.0
 Release:  %autorelease
 Summary:  A single-header C++ library of angle-based flattening algorithms
 License:  Apache-2.0
 URL:      https://github.com/educelab/OpenABF
-Source:   %{url}/archive/%{commit}/%{name}-%{shortcommit}.tar.gz
+Source0:  %{name}-%{version}-clean.tar.gz
+# Remove content with CC-BY-Nd-4.0 license
+Source1:  remove-logo.sh
 Patch1:   tests-use-system-gtest.patch
 
 BuildRequires: cmake
@@ -49,10 +51,8 @@ Development and header files for OpenABF.
 Documentation for OpenABF using doxygen.
 
 %prep
-%autosetup -n OpenABF-%{commit} -p1
+%autosetup -n OpenABF-%{version} -p1
 # Remove logo and banner due to copyright issues
-rm -f logo.png
-rm -f docs/images/*
 
 %build
 %cmake \
